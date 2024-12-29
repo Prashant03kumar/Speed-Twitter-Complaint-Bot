@@ -2,13 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
+import os
 
 
 SPEED_TEST_LINK="https://www.speedtest.net/"
 PROMISE_DOWNLOAD=150
 PROMISE_UPLOAD=10
-TWITTER_EMAIL="prashantserver2@gmail.com"
-TWITTER_PASSOWRD="kkkapilbhai"
+TWITTER_EMAIL=os.getenv('TWITTER_EMAIL')
+TWITTER_PASSOWRD=os.getenv('TWITTER_PASSWORD')
 TWITTER_LINK="https://x.com/home"
 TWITTER_USERNAME="Speed_test3944"
 
