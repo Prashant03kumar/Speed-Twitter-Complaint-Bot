@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
+import os
 
 class InternetSpeedTwitterBot:
     SPEED_TEST_LINK = "https://www.speedtest.net/"
@@ -107,8 +108,8 @@ class InternetSpeedTwitterBot:
 # Usage
 PROMISED_DOWNLOAD = 150
 PROMISED_UPLOAD = 10
-TWITTER_EMAIL = "prashantserver2@gmail.com"
-TWITTER_PASSWORD = "kkkapilbhai"
+TWITTER_EMAIL=os.getenv('TWITTER_EMAIL')
+TWITTER_PASSOWRD=os.getenv('TWITTER_PASSWORD')
 TWITTER_USERNAME = "Speed_test3944"
 
 bot = InternetSpeedTwitterBot(PROMISED_DOWNLOAD, PROMISED_UPLOAD, TWITTER_EMAIL, TWITTER_PASSWORD, TWITTER_USERNAME)
